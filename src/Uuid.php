@@ -56,7 +56,11 @@ class Uuid
         return $uuid;
     }
 
-    static public function parseUuid($uuidString) {
+    static public function parseUuid($uuidString)
+    {
+        if (!self::isValidUuid($uuidString)) {
+            return false;
+        }
         $uuidString = str_replace('-', '', $uuidString);
         $fields = [
             substr($uuidString, 0, 8),
@@ -65,21 +69,29 @@ class Uuid
             substr($uuidString, 16, 4),
             substr($uuidString, 20),
         ];
-    
+
         return $fields;
     }
 
 
-    static public function isValidUuid($uuidString) {
+    static public function isValidUuid($uuidString)
+    {
         return (bool) preg_match('/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i', $uuidString);
     }
 
-    static public function uuidToString($uuid) {
+    static public function uuidToString($uuid)
+    {
+        if (!self::isValidUuid($uuid)) {
+            return false;
+        }
         return $uuid;
     }
 
-    static public function compareUuids($uuid1, $uuid2) {
+    static public function compareUuids($uuid1, $uuid2)
+    {
+        if (!self::isValidUuid($uuid1) || !self::isValidUuid($uuid2)) {
+            return false;
+        }
         return strcmp($uuid1, $uuid2);
     }
-    
 }
