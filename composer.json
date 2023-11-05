@@ -2,7 +2,7 @@
     "name": "hilalahmad/php-uuid",
     "description": "UUIDs are used to create unique identifiers that are often used in distributed systems, databases, and various software applications to ensure the uniqueness of data elements. In PHP, packages related to UUIDs typically provide functions or classes for generating, parsing, and manipulating UUIDs. These packages can be useful in scenarios where unique identifiers are needed to avoid conflicts or ensure data integrity.",
     "type": "library",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
         "uuid",
         "uniqueid",
