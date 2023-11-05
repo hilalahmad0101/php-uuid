@@ -44,31 +44,27 @@ composer require hilalahmad/php-uuid
 To generate a new UUID, use the following code:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 
 $uuid = UUID::generate();
-echo $uuid;
 ```
 ## Generating a UUID1
 
 To generate a new UUID, use the following code:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 
 $uuid = UUID::uuid1();
-echo $uuid;
 ```
 ## Generating a UUID2
 
 To generate a new UUID, use the following code:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 
 $uuid = UUID::uuid2();
-
-echo $uuid;
 ```
 
 ## Parsing a UUID
@@ -76,11 +72,10 @@ echo $uuid;
 You can parse an existing UUID from a string:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 $uuidString = "550e8400-e29b-41d4-a716-446655440000";
 
 $uuid = UUID::parseUuid($uuidString);
-print_r($uuid);
 ```
 
 ## Checking UUID Validity
@@ -88,15 +83,10 @@ print_r($uuid);
 You can check the validity of a UUID:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 $uuidString = "550e8400-e29b-41d4-a716-446655440000";
 
 $uuid = UUID::isValidUuid($uuidString);
-if($uuid){
-  echo " it is valid uuid";
-}else{
-  echo "it is not valid";
-}
 ```
 
 ## Converting UUID to String
@@ -104,11 +94,10 @@ if($uuid){
 You can convert a UUID object to a string:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 $uuid = "550e8400-e29b-41d4-a716-446655440000";
 
 $uuid = UUID::uuidToString($uuidString);
-echo $uuid;
 ```
 
 ## Comparing UUIDs
@@ -116,15 +105,12 @@ echo $uuid;
 You can compare two UUIDs for equality:
 
 ```bash
-use Hilalahmad\PhpUuid\Uuid;
+use HilalAhmad\UUID\UUID;
 
 $uuid1 = '550e8400-e29b-41d4-a716-446655440000';
 $uuid2 = '550e8400-e29b-41d4-a716-446655440001';
 
 $uuid = UUID::compareUuids($uuid1,$uuid2);
-if($uuid < 0){
-  echo "less then one";
-}
 ```
 
 ## Contribution
